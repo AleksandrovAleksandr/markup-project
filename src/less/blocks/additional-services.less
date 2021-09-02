@@ -1,0 +1,158 @@
+.additional-services {
+	width: 100%;
+	margin: 0;
+	margin-top: 45px;
+	padding: 0;
+
+	border: none;
+}
+
+.additional-services__title {
+	margin: 0;
+	padding: 0;
+
+	color: #000000;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.additional-services__list {
+	.list-reset;
+	padding-top: 35px;
+	margin-bottom: -20px;
+}
+
+.additional-services__item {
+	position: relative;
+	
+	margin-bottom: 20px;
+}
+
+.additional-services__name {
+	position: relative;
+	
+	padding: 8px 0 5px 60px;
+	
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.additional-services__checkbox + label::before {
+	content: '';
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 34px;
+	height: 34px;
+	
+	background-color: #ffffff;	
+	border: 1px solid #e5ddd5;
+}
+
+.additional-services__checkbox:checked + label::after {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	
+	width: 22px;
+	height: 2px;
+	
+	background-color: #000000;
+	transform: rotate(-45deg);
+}
+
+.additional-services__checkbox:checked + label span::before {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	
+	width: 2px;
+	height: 10px;
+	
+	background-color: #000000;
+	transform: rotate(-45deg);
+}
+
+@media (min-width: @tablet-width) {
+	.additional-services {
+		margin-top: 60px;
+	}
+	
+	.additional-services__title {
+		position: relative;
+		
+		width: 100%;
+		
+		.title-style;
+		font-weight: 400;
+		
+		&::before {
+			content: '';
+			
+			position: absolute;
+			top: 50%;
+			left: 0;
+			
+			width: 21%;
+			height: 1px;
+			
+			background-color: #e5ddd5;
+			transform: translateY(-50%);
+		}
+		
+		&::after {
+			content: '';
+			
+			position: absolute;
+			top: 50%;
+			right: 0;
+			
+			width: 21%;
+			height: 1px;
+			
+			background-color: #e5ddd5;
+			transform: translateY(-50%);
+		}
+	}
+	
+	.additional-services__list {
+		padding-top: 75px;
+		margin-bottom: -42px;
+		
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.additional-services__item {
+		width: 50%;
+		margin-bottom: 42px;
+	}
+
+	.additional-services__name {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	
+	.additional-services__checkbox:checked + label::after {
+		top: 40%;
+	}
+	
+	.additional-services__checkbox:checked + label span::before {
+		top: 40%;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.additional-services__item {
+		width: calc(100% / 3);
+		
+	}
+}

@@ -1,0 +1,82 @@
+.discount {
+	position: relative;
+	
+	width: calc(100% - 143px);
+	min-height: 50px;
+	margin: 0 auto;
+	margin-top: 25px;
+	padding: 20px 30px 20px 113px;
+
+	border: 1px solid #484848;
+
+	&::before {
+		content: '';
+		
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		
+		width: 56px;
+		height: 56px;
+		
+		background-image: url(../img/clock-icon.svg);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+	}
+}
+
+.discount__text {
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: 400;
+	text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+	.discount {
+		width: calc(100% - 215px);
+		min-height: 52px;
+		margin-top: 10px;
+		padding: 39px 30px 20px 185px;
+		
+		&::before {
+			top: 20px;
+			left: 26px;
+			
+			width: 70px;
+			height: 70px;
+		}
+	}
+	
+	.discount__text {
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.discount {
+		width: 124px;
+		padding: 200px 72px 20px;
+		margin: 0;
+		margin-left: auto;
+		
+		text-align: center;
+		
+		&::before {
+			top: 34px;
+			left: 64px;
+			
+			width: 142px;
+			height: 139px;
+		}
+	}
+	
+	.discount__text {
+		font-size: 20px;
+		line-height: 27px;
+		font-weight: 400;
+		text-transform: none;
+	}
+}

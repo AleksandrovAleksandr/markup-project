@@ -1,0 +1,150 @@
+.social__title {
+	display: none;
+	
+	font-size: 18px;
+}
+
+.social__item {
+	position: relative;
+	
+	width: calc(100% / 3);
+	height: 99px;
+	margin: 0;
+	padding: 0;
+	
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	
+	&:hover {
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+	
+	&:active {
+		background-color: #252525;
+		border-color: #252525;
+	}
+	
+	&:active .social__link {
+		opacity: 0.3;
+	}
+}
+
+.social__list {
+	.list-reset;
+	
+	display: flex;
+}
+
+.social__link {
+	.link-reset;
+	
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	font-size: 0px;
+}
+
+.social__link--vkontakte::after {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	width: 23px;
+	height: 26px;
+	
+	background-image: url(../img/vk-icon.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
+}
+
+.social__link--facebook::after {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	width: 18px;
+	height: 39px;
+	
+	background-image: url(../img/fb-icon.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
+}
+
+.social__link--instagram::after {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	width: 36px;
+	height: 36px;
+	
+	background-image: url(../img/insta-icon.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
+}
+
+@media (min-width: @tablet-width) {
+	.social {
+		width: 100%;
+		order: 3;
+		margin-top: 50px;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.social {
+		width: 162px;
+		margin: 0;
+		margin-left: 80px;
+	}
+	
+	.social__title {
+		display: block;
+		
+		font-size: 18px;
+		line-height: 27px;
+		font-weight: 400;
+		text-align: center;
+	}
+	
+	.social__list {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.social__item {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.social__link--vkontakte::after {
+		width: 15px;
+		height: 17px;
+		
+		background-size: cover;
+	}
+	
+	.social__link--facebook::after {
+		width: 10px;
+		height: 21px;
+		
+		background-size: cover;
+	}
+	
+	.social__link--instagram::after {
+		width: 19px;
+		height: 19px;
+		
+		background-size: cover;
+	}
+}

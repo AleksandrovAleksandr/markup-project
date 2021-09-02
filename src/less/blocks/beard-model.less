@@ -1,0 +1,188 @@
+.beard-model {
+  width: auto;
+  margin: 0 auto;
+  margin-top: 38px;
+  padding: 0;
+
+  border: none;
+}
+
+.beard-model__title {
+  margin: 0;
+  padding: 0;
+
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.beard-model__list {
+  .list-reset;
+  width: 100%;
+  margin: 0 auto;
+  padding: 38px 5% 0 9%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+}
+
+.beard-model__item {
+  position: relative;
+
+  width: calc(100% / 3);
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.beard-model__item--admiral {
+  background-image: url(../img/admiral-beard.svg);
+  background-position: center 98px;
+  background-repeat: no-repeat;
+}
+
+.beard-model__item--lumberjack {
+  background-image: url(../img/lumberjack-beard.svg);
+  background-position: center 98px;
+  background-repeat: no-repeat;
+}
+
+.beard-model__item--polar {
+  background-image: url(../img/polar-beard.svg);
+  background-position: center 98px;
+  background-repeat: no-repeat;
+}
+
+.beard-model__item--boyar {
+  background-image: url(../img/boyar-beard.svg);
+  background-position: center 98px;
+  background-repeat: no-repeat;
+}
+
+.beard-model__item--sage {
+  background-image: url(../img/sage-beard.svg);
+  background-position: center 98px;
+  background-repeat: no-repeat;
+}
+
+.beard-model__radio {
+  margin: 0 auto;
+}
+
+.beard-model__radio + label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.beard-model__radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 16px;
+  left: 50%;
+
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #e5ddd5;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.beard-model__name {
+  position: relative;
+
+  margin: 0 auto;
+  padding-top: 65px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .beard-model {
+    margin-top: 60px;
+  }
+
+  .beard-model__title {
+    position: relative;
+
+    width: 100%;
+
+    .title-style;
+    font-weight: 400;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 21%;
+      height: 1px;
+
+      background-color: #e5ddd5;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 21%;
+      height: 1px;
+
+      background-color: #e5ddd5;
+      transform: translateY(-50%);
+    }
+  }
+
+  .beard-model__list {
+    padding: 0;
+    padding-top: 45px;
+  }
+
+  .beard-model__item {
+    width: 20%;
+  }
+
+  .beard-model__name {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .beard-model {
+    margin-top: 75px;
+  }
+
+  .beard-model__list {
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  .beard-model__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

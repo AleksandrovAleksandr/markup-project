@@ -1,0 +1,70 @@
+.button {
+	.link-reset;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000000;
+	
+	background: none;
+	border: none;
+}
+
+.button--submit {
+	text-align: center;
+	color: #ffffff;
+	
+	background-color: #826550;
+}
+
+.button--ghost {
+	&:hover,
+	&:focus {
+		border-color: #d5c9bd;
+	}
+	
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.button-radio + label:hover::before {
+	border-color: #d5c9bd;
+}
+
+.button-radio + label:active::before {
+	background-color: #d5c9bd;
+}
+
+.button-radio:checked + label:hover::before,
+.button-radio:checked + label:hover::after {
+	border-color: #d5c9bd;
+}
+
+.button-radio:checked + label:active::before,
+.button-radio:checked + label:active::after {
+	background-color: #d5c9bd;
+}
+
+.button-checkbox + label:hover::before {
+	border-color: #d5c9bd;
+}
+
+.button-checkbox + label:active::before {
+	background-color: #d5c9bd;
+}
+
+.button--brown {
+	&:hover {
+		background-color: #6a4d38;
+		cursor: pointer;
+	}
+	
+	&:active span {
+		opacity: 0.3;
+	}
+	
+	&:disabled {
+		background-color: #aeaeae;
+	}
+}
